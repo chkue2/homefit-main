@@ -1,0 +1,151 @@
+@import '@/assets/scss/_index.scss';
+#mainProgram {
+  width: $main-wrap-width;
+  padding: $main-wrap-padding;
+  margin: $main-wrap-margin;
+  .program__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+    br {
+      display: block;
+    }
+  }
+  .program__table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    .table__column {
+      display: flex;
+      .table__row {
+        flex: 1;
+        .row__title {
+          font-size: 30px;
+          font-weight: $medium;
+          line-height: 60px;
+        }
+        .row__img {
+          width: 100%;
+          height: 300px;
+          border-radius: 12px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .row__content {
+          font-size: 20px;
+          margin-top: 20px;
+        }
+        & + .table__row {
+          margin-left: 40px;
+        }
+      }
+      & + .table__column {
+        margin-top: 76px;
+      }
+      &:nth-child(1) {
+        .table__row {
+          &:nth-child(1) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-04@3x.jpg);
+            }
+          }
+          &:nth-child(2) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-05@3x.jpg);
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .table__row {
+          &:nth-child(1) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-06@3x.jpg);
+            }
+          }
+          &:nth-child(2) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-07@3x.jpg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainProgram {
+    width: $main-wrap-width-mo;
+    padding: $main-wrap-padding-mo;
+    margin: $main-wrap-margin-mo;
+    .program__title {
+      font-size: 26px;
+      line-height: 36px;
+      word-break: keep-all;
+      br {
+        display: none;
+      }
+    }
+    .program__table {
+      margin-top: 60px;
+      overflow: hidden;
+      .table__column {
+        flex-direction: column;
+        .table__row {
+          width: 100%;
+          .row__title {
+            font-size: 20px;
+            font-weight: $medium;
+            line-height: 30px;
+          }
+          .row__img {
+            width: 100%;
+            height: 214px;
+            border-radius: 12px;
+            margin-top: 8px;
+          }
+          .row__content {
+            font-size: 16px;
+            margin-top: 12px;
+          }
+          & + .table__row {
+            margin-left: 0;
+            margin-top: 60px;
+          }
+        }
+      }
+      & + .table__column {
+        margin-top: 60px;
+      }
+      &:nth-child(1) {
+        .table__row {
+          &:nth-child(1) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-04@3x.jpg);
+            }
+          }
+          &:nth-child(2) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-05@3x.jpg);
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .table__row {
+          &:nth-child(1) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-06@3x.jpg);
+            }
+          }
+          &:nth-child(2) {
+            .row__img {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-07@3x.jpg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

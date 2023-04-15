@@ -1,0 +1,178 @@
+@import '@/assets/scss/_index.scss';
+#mainRealTimeReview {
+  width: $main-wrap-width;
+  margin: $main-wrap-margin;
+  padding: $main-wrap-padding;
+  .review__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+    margin-bottom: 90px;
+    text-align: center;
+  }
+  .review__pc {
+    position: relative;
+    display: flex;
+  }
+  .review__bg {
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    top: 12px;
+  }
+  .spinner__container {
+    position: absolute;
+    z-index: 2;
+    right: 140px;
+    top: 110px;
+  }
+  .review__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 3;
+    .review__swiper {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      overflow: hidden;
+      .swiper-container {
+        & + .swiper-container {
+          margin-top: 16px;
+        }
+        &:nth-child(2) {
+          .content__block {
+            justify-content: center;
+          }
+        }
+        &:nth-child(3) {
+          .content__block {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    .content__block {
+      width: 100%;
+      display: flex;
+      padding: 12px;
+      .content__item {
+        width: 540px;
+        height: 180px;
+        padding: 36px 35px 36px 40px;
+        border-radius: 24px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        .item__subject {
+          width: 100%;
+          display: -webkit-box;
+          font-size: 20px;
+          margin-bottom: 20px;
+          line-height: 1.2;
+          height: 3.6em;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+        .item__info {
+          display: flex;
+          align-items: center;
+          span {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            &.info__rating {
+              &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: url(https://dcse8twossp9.cloudfront.net/static/img/icon/star-yellow-12-px.svg)
+                  no-repeat center;
+                margin-right: 4px;
+              }
+            }
+            & + span::before {
+              content: '|';
+              margin: 0px 8px;
+              color: #e1e1eb;
+            }
+          }
+        }
+      }
+    }
+    &.review__mo {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainRealTimeReview {
+    width: $main-wrap-width-mo;
+    margin: $main-wrap-margin-mo;
+    padding: 0;
+    .review__title {
+      font-size: 26px;
+      line-height: 36px;
+      margin-bottom: 60px;
+      text-align: left;
+      padding-left: 16px;
+    }
+    .review__pc {
+      display: none;
+    }
+    .spinner__container {
+      top: unset;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 4;
+    }
+    .review__content {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      overflow: hidden;
+      height: 610px;
+      #review5 {
+        padding-top: 11px;
+      }
+      .content__block {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        padding: 0;
+        .content__item {
+          padding: 24px;
+          height: auto;
+          .item__subject {
+            font-size: 16px;
+          }
+        }
+        & + .content__block {
+          margin-top: 12px;
+        }
+      }
+      &::after {
+        content: '';
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.6),
+          #fff
+        );
+        z-index: 3;
+      }
+      &.review__mo {
+        display: block;
+      }
+    }
+  }
+}

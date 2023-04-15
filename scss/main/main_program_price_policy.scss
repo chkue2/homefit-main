@@ -1,0 +1,76 @@
+@import '@/assets/scss/_index.scss';
+#mainProgramPricePolicy {
+  width: $main-wrap-width;
+  padding: $main-wrap-padding;
+  margin: $main-wrap-margin;
+  .program__title {
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: $medium;
+    text-align: center;
+  }
+  .program__subtitle {
+    font-size: 13px;
+    color: #7d7d87;
+    margin-top: 78px;
+    text-align: center;
+  }
+  .program__btn {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e1eb;
+    p {
+      width: 196px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e1e1eb;
+      border-radius: 30px;
+      font-size: 20px;
+      cursor: pointer;
+      &.on {
+        border: 1px solid $workout-color;
+        color: $workout-color;
+        font-weight: $medium;
+        &.program__meditation {
+          border: 1px solid $meditation-color;
+          color: $meditation-color;
+        }
+      }
+      & + p {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainProgramPricePolicy {
+    width: $main-wrap-width-mo;
+    padding: 0px 24px;
+    margin: $main-wrap-margin-mo;
+    .program__title {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    .program__subtitle {
+      margin-top: 60px;
+    }
+    .program__btn {
+      width: 100%;
+      margin-top: 12px;
+      padding-bottom: 24px;
+      p {
+        width: calc(50% - 4px);
+        height: 48px;
+        border-radius: 24px;
+        font-size: 16px;
+      }
+    }
+  }
+}

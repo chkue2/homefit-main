@@ -1,0 +1,101 @@
+@import '@/assets/scss/_index.scss';
+#mainTheProcess {
+  width: $main-wrap-width;
+  padding: $main-wrap-padding;
+  margin: $main-wrap-margin;
+  .process__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+    br {
+      display: none;
+    }
+  }
+  .process__table {
+    display: flex;
+    margin-top: 73px;
+    .table__item {
+      flex: 1;
+      .item__title {
+        font-size: 30px;
+        font-weight: $medium;
+        line-height: 60px;
+      }
+      .item__img {
+        width: 100%;
+        height: 360px;
+        border-radius: 12px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .item__content {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      & + .table__item {
+        margin-left: 40px;
+      }
+      &:nth-child(1) {
+        .item__img {
+          background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-02@3x.jpg);
+        }
+      }
+      &:nth-child(2) {
+        .item__img {
+          background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-03@3x.jpg);
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainTheProcess {
+    width: $main-wrap-width-mo;
+    padding: $main-wrap-padding-mo;
+    margin: $main-wrap-margin-mo;
+    .process__title {
+      font-size: 26px;
+      line-height: 36px;
+      br {
+        display: block;
+      }
+    }
+    .process__table {
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      .table__item {
+        flex: 1;
+        .item__title {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        .item__img {
+          width: 100%;
+          height: 240px;
+          border-radius: 12px;
+          margin-top: 8px;
+        }
+        .item__content {
+          font-size: 16px;
+          margin-top: 12px;
+        }
+        & + .table__item {
+          margin-top: 60px;
+          margin-left: 0;
+        }
+        &:nth-child(1) {
+          .item__img {
+            background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-02@3x.jpg);
+          }
+        }
+        &:nth-child(2) {
+          .item__img {
+            background-image: url(https://dcse8twossp9.cloudfront.net/static/img/main/yogameditation-03@3x.jpg);
+          }
+        }
+      }
+    }
+  }
+}

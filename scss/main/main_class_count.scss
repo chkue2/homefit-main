@@ -1,0 +1,117 @@
+@import '@/assets/scss/_index.scss';
+#mainClassCount {
+  width: $main-wrap-width;
+  margin: $main-wrap-margin;
+  position: relative;
+  .class__container {
+    padding: $main-wrap-padding;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .class__bg {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: 2;
+      transform: scale(0) translateY(-50%);
+      &.active {
+        animation: boom 0.5s forwards;
+      }
+      &.bg__pc {
+        display: block;
+      }
+      &.bg__mo {
+        display: none;
+      }
+    }
+    .class__content {
+      position: relative;
+      z-index: 3;
+      .class__title {
+        font-size: 45px;
+        font-weight: $medium;
+        line-height: 60px;
+        margin-bottom: 12px;
+        span {
+          font-size: 45px;
+          font-weight: $medium;
+        }
+      }
+      .class__subtitle {
+        font-size: 30px;
+        font-weight: $medium;
+        line-height: 60px;
+        color: #6400c8;
+        margin-top: 90px;
+      }
+    }
+    .class__gif {
+      width: 580px;
+      height: 580px;
+      margin-left: 80px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainClassCount {
+    width: $main-wrap-width-mo;
+    margin: $main-wrap-margin-mo;
+    position: relative;
+    .class__container {
+      padding: $main-wrap-padding-mo;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      .class__bg {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 2;
+        transform: scale(0) translateY(-50%);
+        &.active {
+          animation: boom 0.5s forwards;
+        }
+        &.bg__pc {
+          display: none;
+        }
+        &.bg__mo {
+          display: block;
+        }
+      }
+      .class__content {
+        .class__title {
+          font-size: 26px;
+          line-height: 36px;
+          margin-bottom: 6px;
+          span {
+            font-size: 26px;
+          }
+        }
+        .class__subtitle {
+          font-size: 20px;
+          line-height: unset;
+          margin-top: 60px;
+        }
+      }
+      .class__gif {
+        display: none;
+      }
+    }
+  }
+}
+@keyframes boom {
+  0% {
+    transform: scale(0) translateY(-50%);
+  }
+  100% {
+    transform: scale(1) translateY(-50%);
+  }
+}

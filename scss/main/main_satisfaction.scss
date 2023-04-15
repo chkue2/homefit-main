@@ -1,0 +1,125 @@
+@import '@/assets/scss/_index.scss';
+#mainSatisfaction {
+  width: $main-wrap-width;
+  margin: $main-wrap-margin;
+  padding: $main-wrap-padding;
+  .satisfaction__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+  }
+  .satisfaction__subtitle {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .satisfaction__rating {
+    font-size: 30px;
+    font-weight: $light;
+    line-height: 60px;
+    margin: 90px 0px;
+    color: $workout-color;
+    span {
+      color: $workout-color;
+      font-weight: $medium;
+    }
+    &.rating__meditation {
+      color: $meditation-color;
+      span {
+        color: $meditation-color;
+      }
+    }
+  }
+  .satisfaction__table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .table__item {
+      .item__title {
+        font-size: 30px;
+        font-weight: $medium;
+        line-height: 60px;
+        span {
+          font-weight: $medium;
+        }
+      }
+      .item__img {
+        width: 214px;
+        height: 214px;
+        padding: 17px;
+        background-color: #f5f5f5;
+        border-radius: 12px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .item__content {
+        font-size: 20px;
+        margin-top: 20px;
+        word-break: keep-all;
+      }
+      & + .table__item {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainSatisfaction {
+    width: $main-wrap-width-mo;
+    margin: $main-wrap-margin-mo;
+    padding: $main-wrap-padding-mo;
+    .satisfaction__title {
+      font-size: 26px;
+      font-weight: $medium;
+      line-height: 36px;
+    }
+    .satisfaction__subtitle {
+      margin-top: 6px;
+      font-size: 16px;
+    }
+    .satisfaction__rating {
+      font-size: 20px;
+      font-weight: $light;
+      margin: 60px 0px;
+      line-height: unset;
+      b {
+        font-size: $medium;
+      }
+    }
+    .satisfaction__table {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      .table__item {
+        width: calc(50% - 6px);
+        .item__title {
+          font-size: 20px;
+          line-height: unset;
+        }
+        .item__img {
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          margin-top: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .item__content {
+          font-size: 16px;
+          margin-top: 20px;
+        }
+        & + .table__item {
+          margin-left: 0;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 60px;
+        }
+        &:nth-child(2n) {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

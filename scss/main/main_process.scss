@@ -1,0 +1,172 @@
+@import '@/assets/scss/_index.scss';
+#mainProcess {
+  width: $main-wrap-width;
+  margin: $main-wrap-margin;
+  padding: $main-wrap-padding;
+  .process__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+  }
+  .process__table {
+    display: flex;
+    align-items: center;
+    margin-top: 72px;
+    .process__pc {
+      display: block;
+    }
+    .process__mo {
+      display: none;
+    }
+    .table__item {
+      flex: 1;
+      .item__title {
+        font-size: 30px;
+        font-weight: $medium;
+        line-height: 60px;
+      }
+      .item__content {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        border-radius: 24px;
+        padding-left: 30px;
+        span {
+          font-size: 60px;
+        }
+        b {
+          font-size: 24px;
+          font-weight: $medium;
+          margin-left: 50px;
+        }
+        &.content__gray {
+          background-color: #f5f5f5;
+        }
+        &.content__yellow {
+          background-color: #fffae1;
+        }
+        &.content__blue {
+          background-color: #ebf5ff;
+        }
+        &.content__purple {
+          background-color: #fff0ff;
+        }
+        &.content__green {
+          background-color: #e1f0f0;
+        }
+        & + .item__content {
+          margin-top: 12px;
+        }
+      }
+      .item__btn {
+        width: 220px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #000000;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: $medium;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      & + .table__item {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #mainProcess {
+    width: $main-wrap-width-mo;
+    margin: $main-wrap-margin-mo;
+    padding: $main-wrap-padding-mo;
+    .process__title {
+      font-size: 26px;
+      font-weight: $medium;
+      line-height: 36px;
+    }
+    .process__table {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 60px;
+      .process__pc {
+        display: none;
+      }
+      .process__mo {
+        display: block;
+        width: 100%;
+        height: 220px;
+        position: relative;
+        margin-top: 8px;
+        overflow-x: hidden;
+        .swiper-wrapper {
+          width: 100%;
+          height: 100% !important;
+        }
+        .process__pagination {
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+          text-align: center;
+          z-index: 11;
+          .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            margin: 0 3px;
+            background-color: #ffffff;
+            opacity: 1;
+            &.swiper-pagination-bullet-active {
+              background-color: #000000;
+            }
+          }
+        }
+      }
+      .table__item {
+        flex: 1;
+        width: 100%;
+        .item__title {
+          font-size: 20px;
+          line-height: unset;
+        }
+        .item__content {
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          border-radius: 24px;
+          padding-left: 0;
+          padding-top: 40px;
+          box-sizing: border-box;
+          b {
+            font-size: 18px;
+            margin-left: 0;
+          }
+          & + .item__content {
+            margin-top: 0;
+          }
+        }
+        .item__icon {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url('https://dcse8twossp9.cloudfront.net/static/img/icon/plus-circle-20-px.svg')
+            no-repeat center;
+          background-size: cover;
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          z-index: 11;
+        }
+        & + .table__item {
+          margin-top: 60px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

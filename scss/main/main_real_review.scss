@@ -1,0 +1,105 @@
+@import '@/assets/scss/_index.scss';
+#mainRealReview {
+  width: $main-wrap-width;
+  margin: $main-wrap-margin;
+  padding: $main-wrap-padding;
+  .review__title {
+    font-size: 45px;
+    font-weight: $medium;
+    line-height: 60px;
+    margin-bottom: 12px;
+    text-align: center;
+    &.mb {
+      margin-bottom: 73px;
+    }
+  }
+  .review__tab {
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    .tab__item {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid #e1e1eb;
+      font-size: 20px;
+      font-weight: $medium;
+      &.tab__left {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+      &.tab__right {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+      &.on {
+        background-color: #000000;
+        border-color: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+  .review__pc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review__mo {
+    display: none;
+  }
+  .reivew__btn {
+    width: 240px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #000000;
+    font-size: 20px;
+    font-weight: $medium;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 90px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #mainRealReview {
+    width: $main-wrap-width-mo;
+    margin: $main-wrap-margin-mo;
+    padding: $main-wrap-padding-mo;
+    .review__title {
+      font-size: 26px;
+      line-height: 36px;
+      text-align: left;
+    }
+    .review__tab {
+      width: 100%;
+      margin-bottom: 60px;
+      .tab__item {
+        flex: 1;
+        height: 48px;
+        font-size: 16px;
+      }
+    }
+    .review__pc {
+      display: none;
+    }
+    .review__mo {
+      display: block;
+      overflow: hidden;
+      & + .review__mo {
+        margin-top: 60px;
+      }
+    }
+    .reivew__btn {
+      width: 160px;
+      height: 48px;
+      border-radius: 24px;
+      font-size: 16px;
+      margin-top: 60px;
+    }
+  }
+}

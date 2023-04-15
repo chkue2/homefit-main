@@ -1,0 +1,245 @@
+@import '@/assets/scss/_index.scss';
+#main {
+  height: 1300px;
+  background: url(https://dcse8twossp9.cloudfront.net/static/img/main/starting-bg-pc@3x.jpg)
+    no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  .main__container {
+    max-width: $main-wrap-width;
+    margin: 0 auto;
+    padding-left: 24px;
+    position: relative;
+    z-index: 2;
+    .main__title {
+      font-size: 45px;
+      font-weight: $medium;
+      line-height: 50px;
+      margin-top: 144px;
+      margin-bottom: 60px;
+    }
+    .main__list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 120px;
+      .list__column {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        white-space: nowrap;
+        box-sizing: content-box;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        .list__row {
+          height: 60px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 20px;
+          padding-right: 10px;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 50px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 12px;
+          cursor: pointer;
+          box-sizing: border-box;
+          background-color: #ffffff;
+          strong {
+            font-weight: $medium;
+            margin: 0 3px;
+          }
+          i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-position: center;
+            margin-left: 1px;
+            &.emoji--run-women {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/run-women.png);
+            }
+            &.emoji--shit-women {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/shit-women.png);
+            }
+            &.emoji--prayer {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/prayer.png);
+            }
+            &.emoji--shoes {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/shoes.png);
+            }
+            &.emoji--weightlifting {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/weightlifting.png);
+            }
+            &.emoji--heart-orange {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/heart-orange.png);
+            }
+            &.emoji--muscle {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/muscle.png);
+            }
+            &.emoji--stress {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/stress.png);
+            }
+            &.emoji--fist {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/fist.png);
+            }
+            &.emoji--candles {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/candles.png);
+            }
+            &.emoji--grass {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/grass.png);
+            }
+            &.emoji--stand-up {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/stand-up.png);
+            }
+            &.emoji--side-turn {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/side-turn.png);
+            }
+            &.emoji--relieved {
+              background-image: url(https://dcse8twossp9.cloudfront.net/static/img/emoji/relieved.png);
+            }
+          }
+          &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+          }
+          &.row__healthcare {
+            &.row__border {
+              border: 3px solid $workout-color;
+            }
+            &::after {
+              background: url(https://dcse8twossp9.cloudfront.net/static/img/icon/expand-right-purple-24-px.svg)
+                no-repeat center;
+            }
+          }
+          &.row__mindcare {
+            &.row__border {
+              border: 3px solid $meditation-color;
+            }
+            &::after {
+              background: url(https://dcse8twossp9.cloudfront.net/static/img/icon/expand-right-orange-24-px.svg)
+                no-repeat center;
+            }
+          }
+          & + .list__row {
+            margin-left: 20px;
+          }
+        }
+        & + .list__column {
+          margin-top: 8px;
+        }
+        &.w100 {
+          padding-right: 16px;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &:not(.w100)::after {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 12px;
+          padding: 8px;
+        }
+      }
+      &.list__pc {
+        display: flex;
+      }
+      &.list__mo {
+        display: none;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  #main {
+    height: auto;
+    background: none;
+    .main__container {
+      width: $main-wrap-width-mo;
+      padding: 0;
+      .main__title {
+        font-size: 30px;
+        line-height: 32px;
+        margin-top: 40px;
+        margin-bottom: 0;
+        text-align: center;
+      }
+      .main__list {
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-image: linear-gradient(to bottom, #fff, #fff 60%, #fafaff);
+        .list__column {
+          width: auto;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding-left: 16px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          white-space: nowrap;
+          box-sizing: content-box;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          display: inline-flex;
+          .list__row {
+            &.row__border {
+              width: 100%;
+              justify-content: space-between;
+              text-align: left;
+            }
+            & + .list__row {
+              margin-left: 12px;
+            }
+          }
+          &.w100 {
+            padding-right: 16px;
+          }
+          & + .list__column {
+            margin-top: 0;
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          &:not(.w100)::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 12px;
+            padding: 8px;
+          }
+        }
+        &.list__pc {
+          display: none;
+        }
+        &.list__mo {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 1921px) {
+  #main {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 400px;
+      background-image: linear-gradient(
+        to bottom,
+        #fff,
+        rgba(255, 255, 255, 0)
+      );
+      z-index: 1;
+    }
+  }
+}
